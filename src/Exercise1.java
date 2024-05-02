@@ -25,5 +25,7 @@ public class Exercise1 {
 
         insertAt0(ls, "Pink");
         //iterate(ls);
+        ls.set(2, "Yellow");
+        System.out.println(ls);
     }
 }
