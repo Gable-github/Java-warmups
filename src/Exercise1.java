@@ -27,6 +27,22 @@ public class Exercise1 {
         return lsIn;
     }
 
+    public static List<String> swap(List<String> ls, int pos1, int pos2) {
+        String temp = ls.get(pos1);
+        ls.set(pos1, ls.get(pos2));
+        ls.set(pos2, temp);
+        return ls;
+    }
+
+    @SafeVarargs
+    public static List<String> addTogether(List<String>... args){
+        List<String> finList = new ArrayList<String>();
+        for (List<String> ls : args){
+            finList.addAll(ls);
+        }
+        return finList;
+    }
+
     public static void main(String[] args) {
         List<String> ls = new ArrayList<String>();
         ls.add("Red");
@@ -61,5 +77,13 @@ public class Exercise1 {
         ls2.add("Blue");
         List<Boolean> lsIn = inLs(ls, ls2);
         System.out.println(lsIn);
+//
+//        swap(ls, 1, 3);
+//        System.out.println(ls);
+//        Collections.swap(ls,1, 3); // faster way
+//        System.out.println(ls);
+
+//        List<String> finList = addTogether(ls, ls2);
+//        System.out.println(finList);
     }
 }
