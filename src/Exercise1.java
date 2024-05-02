@@ -10,6 +10,10 @@ public class Exercise1 {
         }
     }
 
+    public static void insertAt0(List<String> ls, String str){
+        ls.addFirst(str);
+    }
+
     public static void main(String[] args) {
         List<String> ls = new ArrayList<String>();
         ls.add("Red");
@@ -17,8 +21,9 @@ public class Exercise1 {
         ls.add("Orange");
         ls.add("White");
         ls.add("Black");
-        // System.out.println(ls);
+        System.out.println(ls);
 
-        iterate(ls);
+        insertAt0(ls, "Pink");
+        //iterate(ls);
     }
 }
