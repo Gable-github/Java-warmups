@@ -1,5 +1,7 @@
 // https://www.w3resource.com/java-exercises/collection/java-collection-exercise-1.php
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 
 public class Exercise1 {
@@ -32,5 +34,9 @@ public class Exercise1 {
         System.out.println(ls);
 
         System.out.println(ls.get(3));
+
+        System.out.println(ls);
+        Collections.sort(ls);
+        System.out.println(ls);
     }
 }
