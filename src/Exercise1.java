@@ -1,8 +1,6 @@
 // https://www.w3resource.com/java-exercises/collection/java-collection-exercise-1.php
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.List;
+import javax.xml.transform.Source;
+import java.util.*;
 
 public class Exercise1 {
 
@@ -14,6 +12,19 @@ public class Exercise1 {
 
     public static void insertAt0(List<String> ls, String str){
         ls.addFirst(str);
+    }
+
+    public static List<Boolean> inLs(List<String> ls, List<String> ls2) {
+        List<Boolean> lsIn = new ArrayList<>();
+        List<String> longerList = ls.size() >= ls2.size() ? ls : ls2;
+        List<String> shorterList = ls.size() < ls2.size() ? ls : ls2;
+
+        Set<String> shorterListSet = new HashSet<>(shorterList);
+
+        for (String item : longerList) {
+            lsIn.add(shorterListSet.contains(item));
+        }
+        return lsIn;
     }
 
     public static void main(String[] args) {
@@ -30,25 +41,25 @@ public class Exercise1 {
         ls.set(2, "Yellow");
         System.out.println(ls);
 
-        ls.remove(3);
-        System.out.println(ls);
-
-        System.out.println(ls.get(3));
-
-        System.out.println(ls);
-        Collections.sort(ls);
-        System.out.println(ls);
-
+//        ls.remove(3);
+//
+//        System.out.println(ls.get(3));
+//
+//        Collections.sort(ls);
+//
         List<String> ls2 = new ArrayList<String>(Collections.nCopies(ls.size(), null));
-        System.out.println(ls2);
-
         Collections.copy(ls2, ls);
         System.out.println(ls2);
 
-        Collections.shuffle(ls2);
-        System.out.println(ls2); // different seed each time
+//        Collections.shuffle(ls2);  // different seed each time
+//
+//        Collections.reverse(ls2);
 
-        Collections.reverse(ls2);
-        System.out.println(ls2);
+
+        System.out.println("list 1 "+ls);
+        System.out.println("list 2 "+ls2);
+        ls2.add("Blue");
+        List<Boolean> lsIn = inLs(ls, ls2);
+        System.out.println(lsIn);
     }
 }
