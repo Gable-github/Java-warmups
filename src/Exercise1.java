@@ -3,6 +3,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Exercise1 {
+
+    public static <T> void iterate(List<T> ls){
+        for(T item: ls) {
+            System.out.println(item);
+        }
+    }
+
     public static void main(String[] args) {
         List<String> ls = new ArrayList<String>();
         ls.add("Red");
@@ -10,6 +17,8 @@ public class Exercise1 {
         ls.add("Orange");
         ls.add("White");
         ls.add("Black");
-        System.out.println(ls);
+        // System.out.println(ls);
+
+        iterate(ls);
     }
 }
