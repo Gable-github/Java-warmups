@@ -27,5 +27,8 @@ public class Exercise1 {
         //iterate(ls);
         ls.set(2, "Yellow");
         System.out.println(ls);
+
+        ls.remove(3);
+        System.out.println(ls);
     }
 }
