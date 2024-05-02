@@ -30,5 +30,7 @@ public class Exercise1 {
 
         ls.remove(3);
         System.out.println(ls);
+
+        System.out.println(ls.get(3));
     }
 }
