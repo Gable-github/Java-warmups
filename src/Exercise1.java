@@ -38,5 +38,17 @@ public class Exercise1 {
         System.out.println(ls);
         Collections.sort(ls);
         System.out.println(ls);
+
+        List<String> ls2 = new ArrayList<String>(Collections.nCopies(ls.size(), null));
+        System.out.println(ls2);
+
+        Collections.copy(ls2, ls);
+        System.out.println(ls2);
+
+        Collections.shuffle(ls2);
+        System.out.println(ls2); // different seed each time
+
+        Collections.reverse(ls2);
+        System.out.println(ls2);
     }
 }
