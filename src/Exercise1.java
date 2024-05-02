@@ -93,5 +93,8 @@ public class Exercise1 {
 
 //        List<String> clonedList = cloneLs(ls);
 //        System.out.println(clonedList==ls);
+
+//        ls.removeAll(ls);
+//        System.out.println(ls);
     }
 }
