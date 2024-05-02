@@ -1,5 +1,6 @@
 // https://www.w3resource.com/java-exercises/collection/java-collection-exercise-1.php
 import javax.xml.transform.Source;
+import java.lang.reflect.Array;
 import java.util.*;
 
 public class Exercise1 {
@@ -41,6 +42,10 @@ public class Exercise1 {
             finList.addAll(ls);
         }
         return finList;
+    }
+
+    public static List<String> cloneLs(List<String> ls) {
+        return new ArrayList<>(ls);
     }
 
     public static void main(String[] args) {
@@ -85,5 +90,8 @@ public class Exercise1 {
 
 //        List<String> finList = addTogether(ls, ls2);
 //        System.out.println(finList);
+
+//        List<String> clonedList = cloneLs(ls);
+//        System.out.println(clonedList==ls);
     }
 }
