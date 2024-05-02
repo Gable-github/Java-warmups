@@ -96,5 +96,16 @@ public class Exercise1 {
 
 //        ls.removeAll(ls);
 //        System.out.println(ls);
+
+//        ArrayList<String> new_ls = new ArrayList<>(9);
+//        new_ls.add("hi");
+//        new_ls.add("hi");
+//        new_ls.add("hi");
+//        new_ls.add("hi");
+//        new_ls.add("hi");
+//        new_ls.trimToSize();
+//        System.out.println(new_ls);
+
+
     }
 }
